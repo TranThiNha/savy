@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +16,12 @@ import { ListUserComponent, DetailUserComponent } from './containers';
     ListUserComponent,
     DetailUserComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgZorroAntdModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgZorroAntdModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

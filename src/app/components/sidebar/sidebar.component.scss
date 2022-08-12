@@ -2,19 +2,56 @@
 
 app-sidebar {
   nz-layout {
-    min-height: 100vh;
-    max-height: 100vh;
+    height: 100vh;
 
     .ant-layout-sider-children,
-    .ant-menu,
+    .ant-menu.ant-menu-dark,
     .ant-menu-sub.ant-menu-inline,
+    .ant-menu-dark .ant-menu-inline.ant-menu-sub,
     .ant-menu-item {
       background-color: $purple;
+      border-right: 0;
     }
 
     .ant-menu-item,
     .ant-menu-submenu-title {
-      color: $white;
+      color: $white !important;
+      max-width: 100%;
+    }
+
+    .ant-menu-item,
+    .ant-menu-submenu-title {
+      &:hover {
+        color: $white !important;
+        opacity: 0.8;
+
+        span {
+          color: $white;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .ng-star-inserted {
+      .ant-menu-item {
+
+        &.ant-menu-item-selected {
+        }
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: $purple-1 !important;
+      border-left: 4px solid $orange;
+      border-right: 0;
+
+      span {
+        margin-left: 0 !important;
+      }
+
+      &::after {
+        display: none;
+      }
     }
   }
 }
