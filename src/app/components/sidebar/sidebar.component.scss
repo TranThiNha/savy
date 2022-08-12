@@ -4,6 +4,24 @@ app-sidebar {
   nz-layout {
     height: 100vh;
 
+    .logo {
+      padding: 1.6rem 1.2rem;
+    }
+
+    .ant-input-affix-wrapper {
+      margin: 0 1.2rem 0.8rem;
+      width: -webkit-fill-available;
+      height: 3.6rem;
+      border: 0;
+      background-color: $purple-2;
+      border-radius: 4px;
+
+      input {
+        background-color: $purple-2;
+        border-radius: 4px;
+      }
+    }
+
     .ant-layout-sider-children,
     .ant-menu.ant-menu-dark,
     .ant-menu-sub.ant-menu-inline,
@@ -15,12 +33,15 @@ app-sidebar {
 
     .ant-menu-item,
     .ant-menu-submenu-title {
+      font-size: 1.4rem;
+      line-height: 2rem;
       color: $white !important;
       max-width: 100%;
-    }
 
-    .ant-menu-item,
-    .ant-menu-submenu-title {
+      img {
+        margin-right: 1.2rem;
+      }
+
       &:hover {
         color: $white !important;
         opacity: 0.8;
@@ -34,10 +55,13 @@ app-sidebar {
 
     .ng-star-inserted {
       .ant-menu-item {
-
-        &.ant-menu-item-selected {
-        }
+        font-size: 1.2rem;
+        line-height: 1.6rem;
       }
+    }
+
+    .ant-menu-item {
+      margin: 0 !important;
     }
 
     .ant-menu-item-selected {

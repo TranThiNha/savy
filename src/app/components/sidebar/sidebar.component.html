@@ -1,35 +1,35 @@
 <nz-layout>
     <nz-sider [nzTrigger]="null" nzCollapsible nzWidth="240px">
-        <div class="logo"><img src="src/assets/icons/Logo.svg" /></div>
+        <div class="logo">
+            <img src="/assets/icons/Logo.svg" />
+        </div>
+
+        <nz-input-group [nzPrefix]="prefixSearch">
+            <input type="text" nz-input placeholder="Tìm kiếm chức năng..." />
+        </nz-input-group>
+        <ng-template #prefixSearch><i nz-icon nzType="search"></i></ng-template>
+
         <ul nz-menu nzMode="inline" nzTheme="dark">
-            <li nz-menu-item>
 
-                <span>Option 1</span>
-            </li>
-            <li nz-menu-item>
-                <span>Option 2</span>
-            </li>
-            <li nz-submenu nzTitle="User">
-                <ul>
-                    <li nz-menu-item>Tom</li>
-                    <li nz-menu-item>Bill</li>
-                    <li nz-menu-item>Alex</li>
-                </ul>
-            </li>
+            <ng-container *ngFor="let item of MENU_SIDER">
+                <li *ngIf="item.sections && item.sections.length > 0; else elseBlock" nz-submenu [nzTitle]='title'>
+                    <ng-template #title>
+                        <img src="{{'/assets/icons/' + item.icon}}" />
+                        {{item.name}}
+                    </ng-template>
 
+                    <ul *ngIf="item.sections && item.sections.length > 0">
+                        <li nz-menu-item *ngFor="let section of item.sections">{{section.name}}</li>
+                    </ul>
+                </li>
 
-            <li nz-submenu nzTitle="BILL">
-                <ul>
-                    <li nz-menu-item>Tom</li>
-                    <li nz-menu-item>Bill</li>
-                    <li nz-menu-item>Alex</li>
-                </ul>
-            </li>
-
-            <li nz-menu-item>
-                <i nz-icon nzType="file"></i>
-                <span>File</span>
-            </li>
+                <ng-template #elseBlock>
+                    <li nz-menu-item>
+                        <img src="{{'/assets/icons/' + item.icon}}" />
+                        <span> {{item.name}}</span>
+                    </li>
+                </ng-template>
+            </ng-container>
         </ul>
     </nz-sider>
 </nz-layout>
