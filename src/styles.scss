@@ -4,6 +4,8 @@
 @import "~ng-zorro-antd/ng-zorro-antd.compact.css";
 @import "~ng-zorro-antd/ng-zorro-antd.aliyun.css";
 
+@import './app/components/sidebar/sidebar.component.scss';
+
 body {
   height: 100vh;
   width: 100vw;

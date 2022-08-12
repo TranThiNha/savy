@@ -1,0 +1,20 @@
+@import "../../styles/color.scss";
+
+app-sidebar {
+  nz-layout {
+    min-height: 100vh;
+    max-height: 100vh;
+
+    .ant-layout-sider-children,
+    .ant-menu,
+    .ant-menu-sub.ant-menu-inline,
+    .ant-menu-item {
+      background-color: $purple;
+    }
+
+    .ant-menu-item,
+    .ant-menu-submenu-title {
+      color: $white;
+    }
+  }
+}

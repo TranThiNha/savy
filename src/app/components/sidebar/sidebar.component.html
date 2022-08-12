@@ -1,7 +1,7 @@
 <nz-layout>
-    <nz-sider nzCollapsible nzWidth="240px">
+    <nz-sider [nzTrigger]="null" nzCollapsible nzWidth="240px">
         <div class="logo"></div>
-        <ul nz-menu>
+        <ul nz-menu nzMode="inline">
             <li nz-menu-item>
                 <i nz-icon nzType="pie-chart"></i>
                 <span>Option 1</span>
@@ -11,7 +11,7 @@
                 <span>Option 2</span>
             </li>
             <li nz-submenu nzTitle="User" nzIcon="user">
-                <ul>
+                <ul nz-menu>
                     <li nz-menu-item>Tom</li>
                     <li nz-menu-item>Bill</li>
                     <li nz-menu-item>Alex</li>
