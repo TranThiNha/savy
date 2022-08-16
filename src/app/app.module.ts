@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { NgZorroAntdModule } from './ng-zorro-antd.module';
 import { ListUserComponent, DetailUserComponent } from './containers';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ListUserComponent, DetailUserComponent } from './containers';
     SidebarComponent,
     ListUserComponent,
     DetailUserComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

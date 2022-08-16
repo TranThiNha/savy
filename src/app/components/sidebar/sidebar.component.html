@@ -1,35 +1,37 @@
 <nz-layout>
-    <nz-sider [nzTrigger]="null" nzCollapsible nzWidth="240px">
-        <div class="logo">
-            <img src="/assets/icons/Logo.svg" />
-        </div>
+  <nz-sider [nzTrigger]="null" nzCollapsible nzWidth="240px">
+    <div class="logo">
+      <img src="/assets/icons/Logo.svg" />
+    </div>
 
-        <nz-input-group [nzPrefix]="prefixSearch">
-            <input type="text" nz-input placeholder="Tìm kiếm chức năng..." />
-        </nz-input-group>
-        <ng-template #prefixSearch><i nz-icon nzType="search"></i></ng-template>
+    <nz-input-group [nzPrefix]="prefixSearch">
+      <input type="text" nz-input placeholder="Tìm kiếm chức năng..." />
+    </nz-input-group>
+    <ng-template #prefixSearch>
+      <i nz-icon nzType="search" style='color: #fff'></i>
+    </ng-template>
 
-        <ul nz-menu nzMode="inline" nzTheme="dark">
+    <ul nz-menu nzMode="inline" nzTheme="dark">
 
-            <ng-container *ngFor="let item of MENU_SIDER">
-                <li *ngIf="item.sections && item.sections.length > 0; else elseBlock" nz-submenu [nzTitle]='title'>
-                    <ng-template #title>
-                        <img src="{{'/assets/icons/' + item.icon}}" />
-                        {{item.name}}
-                    </ng-template>
+      <ng-container *ngFor="let item of MENU_SIDER">
+        <li *ngIf="item.sections && item.sections.length > 0; else elseBlock" nz-submenu [nzTitle]='title'>
+          <ng-template #title>
+            <img src="{{'/assets/icons/' + item.icon}}" />
+            {{item.name}}
+          </ng-template>
 
-                    <ul *ngIf="item.sections && item.sections.length > 0">
-                        <li nz-menu-item *ngFor="let section of item.sections">{{section.name}}</li>
-                    </ul>
-                </li>
+          <ul *ngIf="item.sections && item.sections.length > 0">
+            <li nz-menu-item *ngFor="let section of item.sections">{{section.name}}</li>
+          </ul>
+        </li>
 
-                <ng-template #elseBlock>
-                    <li nz-menu-item>
-                        <img src="{{'/assets/icons/' + item.icon}}" />
-                        <span> {{item.name}}</span>
-                    </li>
-                </ng-template>
-            </ng-container>
-        </ul>
-    </nz-sider>
+        <ng-template #elseBlock>
+          <li nz-menu-item>
+            <img src="{{'/assets/icons/' + item.icon}}" />
+            <span> {{item.name}}</span>
+          </li>
+        </ng-template>
+      </ng-container>
+    </ul>
+  </nz-sider>
 </nz-layout>

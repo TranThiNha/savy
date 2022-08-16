@@ -1,0 +1,22 @@
+<nz-header>
+  <div class='title-page'>Title</div>
+
+
+  <ng-container>
+    <div nz-dropdown [nzDropdownMenu]="menu" [nzPlacement]="'bottomRight'" nzTrigger="click">
+      <nz-avatar [nzSize]="40">
+
+      </nz-avatar>
+
+      <span class='name-account'>Xin chào, Nhã</span>
+      <i nz-icon nzType="down" style='color: #FF9800'></i>
+    </div>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item>1st menu item length</li>
+        <li nz-menu-item>2nd menu item length</li>
+        <li nz-menu-item>3rd menu item length</li>
+      </ul>
+    </nz-dropdown-menu>
+  </ng-container>
+</nz-header>
