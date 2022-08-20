@@ -11,6 +11,13 @@ import {
 
 export class SidebarComponent implements OnInit {
   constructor() {}
+  listOfData = [{
+    key: '1',
+    name: 'John Brown',
+    age: 32,
+    address: 'New York No. 1 Lake Park'
+  },
+];
 
   MENU_SIDER = [{
       name: 'Trang chủ',

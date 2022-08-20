@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+
+interface Person {
+  key: string;
+  name: string;
+  age: number;
+  address: string;
+}
 
 @Component({
-  selector: 'app-list-user',
+  selector: 'list-user',
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.scss']
 })
+
 export class ListUserComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  // listOfData = [{
+  //     key: '1',
+  //     name: 'John Brown',
+  //     age: 32,
+  //     address: 'New York No. 1 Lake Park'
+  //   },
+  // ];
+
+  ngOnInit(): void {}
 
 }

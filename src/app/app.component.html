@@ -1,10 +1,11 @@
 <nz-layout class='app-root'>
-    <app-sidebar></app-sidebar>
+  <app-sidebar></app-sidebar>
 
-    <nz-layout class='main-container'>
-        <app-header></app-header>
-        <nz-content>
-            <router-outlet></router-outlet>
-        </nz-content>
-    </nz-layout>
+  <nz-layout class='main-container'>
+    <app-header></app-header>
+
+    <nz-content class='section-content'>
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
 </nz-layout>
