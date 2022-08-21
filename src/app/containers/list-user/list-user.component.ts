@@ -3,7 +3,7 @@ import {
   OnInit
 } from '@angular/core';
 
-interface Person {
+type Person = {
   key: string;
   name: string;
   age: number;
@@ -18,15 +18,7 @@ interface Person {
 
 export class ListUserComponent implements OnInit {
 
-  constructor() {}
-
-  // listOfData = [{
-  //     key: '1',
-  //     name: 'John Brown',
-  //     age: 32,
-  //     address: 'New York No. 1 Lake Park'
-  //   },
-  // ];
+  constructor() { }
 
   ngOnInit(): void {}
 

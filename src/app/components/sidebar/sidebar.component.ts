@@ -1,36 +1,27 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
-
 export class SidebarComponent implements OnInit {
   constructor() {}
-  listOfData = [{
-    key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park'
-  },
-];
 
-  MENU_SIDER = [{
+  MENU_SIDER = [
+    {
       name: 'Trang chủ',
-      icon: "home.svg"
+      icon: 'home.svg',
     },
     {
       name: 'Danh sách KH Savy',
-      icon: "people.svg"
+      icon: 'people.svg',
     },
     {
       name: 'Quản lý tài khoản',
-      icon: "wallet.svg",
-      sections: [{
+      icon: 'wallet.svg',
+      sections: [
+        {
           name: 'Khoá/Mở khoá tài khoản',
         },
         {
@@ -43,11 +34,11 @@ export class SidebarComponent implements OnInit {
     },
     {
       name: 'Quản lý thông báo',
-      icon: "noti.svg"
+      icon: 'noti.svg',
     },
     {
       name: 'Phê duyệt tập trung',
-      icon: "check.svg"
+      icon: 'check.svg',
     },
   ];
 

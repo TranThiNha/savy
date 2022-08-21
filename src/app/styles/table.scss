@@ -1,0 +1,28 @@
+.ant-table-content {
+  table {
+    .ant-table-thead {
+      border-color: $purple-5 !important;
+
+      .ant-table-row {
+        .ant-table-cell {
+          background: $purple-4;
+          padding: 12px;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          color: $purple-3;
+          border-color: $purple-5 !important;
+        }
+      }
+    }
+
+    .ant-table-row {
+      .ant-table-cell {
+        border-color: $grey-1;
+      }
+    }
+
+    .ng-star-inserted {
+    }
+  }
+}

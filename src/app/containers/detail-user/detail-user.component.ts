@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './detail-user.component.html',
   styleUrls: ['./detail-user.component.scss']
 })
+
 export class DetailUserComponent implements OnInit {
 
   constructor() { }

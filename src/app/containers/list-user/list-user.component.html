@@ -1,11 +1,13 @@
-<list-user>
+<p>
   <ng-container>
-    <div>Danh sách tài khoản</div>
+    <div class='mb-[8px] flex items-center'>
+      <div class='text-[16px] text-[#2C1F50] font-medium'>Danh sách tài khoản</div>
+    </div>
 
     <div>Action</div>
   </ng-container>
 
-  <nz-table #basicTable [nzData]="[{
+  <nz-table nzBordered #basicTable [nzData]="[{
     key: '1',
     name: 'John Brown',
     age: 32,
@@ -32,4 +34,4 @@
       </tr>
     </tbody>
   </nz-table>
-</list-user>
+</p>
